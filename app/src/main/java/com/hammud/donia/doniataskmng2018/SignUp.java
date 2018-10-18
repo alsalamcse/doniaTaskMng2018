@@ -23,8 +23,8 @@ public class SignUp extends AppCompatActivity
     private FirebaseUser user;
     private  FirebaseAuth auth;
 
-    FirebaseAuth auth;// to establish sign in sign up
-    FirebaseUser user;// user
+    // to establish sign in sign up
+    // user
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,22 +48,34 @@ public class SignUp extends AppCompatActivity
         user=auth.getCurrentUser();
 
          }
-         private void dataHandler(){
-             boolean isk=true;
-             String email=etEmail.getText().toString();
-             String Password=etPassword.getText().toString();
-             String fName=etfirst.getText().toString();
-             String LName=etlast.getText().toString();
-             String Phone=phone.getText().toString();
-             boolean isok= false;
-             if (email)
+         private void dataHandler()
+         {
+             boolean isk = true;
+             String email = etEmail.getText().toString();
+             String Password = etPassword.getText().toString();
+             String fName = etfirst.getText().toString();
+             String LName = etlast.getText().toString();
+             String Phone = phone.getText().toString();
+             boolean isok = false;
+             if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0) {
+                 etEmail.setError("wrong Email");
+                 isok = false;
+             }
+             if (etPassword.length() < 8) ;
+             {
+                 etPassword.setError("have to be at least 8 char");
+                 isok = false;
+             }
+             if (isok)
+             {
+                 creatAcount(email,Password);
+             }
          }
 
 
 
-
-    private void creatAcount(String Email,String passw){
-        auth.createUserWithEmailAndPassword(Email,passw).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
+    private void creatAcount(String Email, String password){
+        auth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task)
             {
