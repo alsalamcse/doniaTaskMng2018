@@ -7,29 +7,86 @@
     tools:context=".addTaskActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Title"
         android:inputType="textPersonName"
-        android:text="Name"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Task"
         android:inputType="textPersonName"
-        android:text="Name"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="76dp" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/sB1"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="216dp"
+        android:layout_height="30dp"
+        android:max="10"
+        android:progress="3"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <SeekBar
+        android:id="@+id/sB2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="238dp"
+        android:layout_height="35dp"
+        android:max="10"
+        android:progress="3"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <Button
+        android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:text="Save" />
+
+    <TextView
+        android:id="@+id/tvImportant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Important"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <TextView
+        android:id="@+id/tvNeseccery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neseccery"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/etDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="DueDate"
+        android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="160dp" />
+        tools:layout_editor_absoluteY="131dp" />
+
+    <Button
+        android:id="@+id/btnDataPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DataPicker"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="186dp" />
+
 </android.support.constraint.ConstraintLayout>
