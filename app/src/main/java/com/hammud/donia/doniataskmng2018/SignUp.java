@@ -58,7 +58,8 @@ public class SignUp extends AppCompatActivity
              String LName = etlast.getText().toString();
              String Phone = phone.getText().toString();
              boolean isok = false;
-             if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0) {
+             if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0)
+             {
                  etEmail.setError("wrong Email");
                  isok = false;
              }
@@ -76,7 +77,8 @@ public class SignUp extends AppCompatActivity
 
 
     private void creatAcount(String Email, String password){
-        auth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
+        auth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>()
+        {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task)
             {
