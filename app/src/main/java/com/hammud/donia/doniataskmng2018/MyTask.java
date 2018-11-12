@@ -37,7 +37,7 @@ public class MyTask
         return text;
     }
 
-    public void setText(String text) {
+    public void setText(MyTask text) {
         this.text = text;
     }
 
@@ -45,7 +45,7 @@ public class MyTask
         return important;
     }
 
-    public void setImportant(int important) {
+    public void setImportant(String important) {
         this.important = important;
     }
 
@@ -65,7 +65,7 @@ public class MyTask
         this.createdA = createdA;
     }
 
-    public Date getDueDate() {
+    public Date getDueDate(Date date) {
         return dueDate;
     }
 

@@ -3,6 +3,8 @@ package com.hammud.donia.doniataskmng2018;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -43,17 +47,14 @@ public class addTaskActivity extends AppCompatActivity
             public void onClick(View view) {
 
                 dataHandler();
-
-
-
             }
         });
-
-
-
     }
-    public void onClick(View view){
-        if (view==btnDataPicker){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void onClick(View view)
+    {
+        if (view==btnDataPicker)
+        {
             final Calendar c=Calendar.getInstance();
             mYear=c.get(Calendar.YEAR);
             mMonth=c.get(Calendar.MONTH);
@@ -63,10 +64,10 @@ public class addTaskActivity extends AppCompatActivity
                 @Override
                 public void onDateSet(DatePicker datePicker, int i, int i1, int i2)
                 {
-                    etDueData.setText(mDay+"-"+mMonth+"-"+mYear).;
+                    etDueData.setText(mDay+"-"+mMonth+"-"+mYear);
 
                 }
-            })
+            }
         }
     }
 
@@ -75,19 +76,30 @@ public class addTaskActivity extends AppCompatActivity
         boolean isk = true;
         String title = etTitle.getText().toString();
         String task = etTask.getText().toString();
-        String dueDate = etDueData.getText().toString();
+        String Date = etDueData.getText().toString();
         String important = tvImportant.getText().toString();
         String necessery = tvNecessery.getText().toString();
         boolean isok = false;
-        if (title.length() < 4 ||title.indexOf('8') < 0 || title.indexOf('.') < 0)
+        if (title.length()==0)
         {
            etTitle.setError("wrong Email");
             isok = false;
         }
-        if (etTask.length() < 8) ;
+        if (etTask.length() ==0
         {
             etTask.setError("have to be at least 8 char");
             isok = false;
+        }
+        if (isok)
+        {
+            MyTask Task= new MyTask();
+            Task.setCreatedA(new Date());
+            Task.getDueDate(new Date(Date));
+            Task.setText(Task);
+            Task.setTitle(title);
+            Task.setImportant(important);
+            Task.getNecessary(necessery);
+
         }
     }
 }

@@ -18,6 +18,7 @@ public class LogInActivity extends AppCompatActivity
         setContentView(R.layout.activity_log_in);
         etEmail=findViewById(R.id.etEmail);
        etPassword=findViewById(R.id.etPassword);
+       
 
        btn1=findViewById(R.id.btn1);
        btn2=findViewById(R.id.btn2);
