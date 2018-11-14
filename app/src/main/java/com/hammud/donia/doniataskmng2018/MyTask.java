@@ -1,5 +1,9 @@
 package com.hammud.donia.doniataskmng2018;
 
+import android.content.Intent;
+
+import org.w3c.dom.Text;
+
 import java.util.Date;
 
 public class MyTask
@@ -7,12 +11,13 @@ public class MyTask
     private String key; // key; uniqe id for each object
     private String title;
     private  String text;
-    private  int important;
-    private  int necessary;
+    private  String important;
+    private  String necessary;
     private Date createdA;
     private Date dueDate;
+    private String Owner;
 
-    public Object setOwner;
+
 
     public MyTask()
     {
@@ -39,11 +44,11 @@ public class MyTask
         return text;
     }
 
-    public void setText(MyTask text) {
+    public void setText(String text) {
         this.text = text;
     }
 
-    public int getImportant() {
+    public String getImportant() {
         return important;
     }
 
@@ -51,11 +56,11 @@ public class MyTask
         this.important = important;
     }
 
-    public int getNecessary(String necessery) {
+    public String getNecessary(String necessery) {
         return necessary;
     }
 
-    public void setNecessary(int necessary) {
+    public void setNecessary(String necessary) {
         this.necessary = necessary;
     }
 
@@ -70,6 +75,7 @@ public class MyTask
     public Date getDueDate(Date date) {
         return dueDate;
     }
+    public void setOwner(String Owner){this.Owner=Owner;}
 
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
@@ -88,4 +94,8 @@ public class MyTask
                 ", dueDate=" + dueDate +
                 '}';
     }
+
+
+
+
 }

@@ -87,7 +87,7 @@ public class addTaskActivity extends AppCompatActivity
            etTitle.setError("wrong Email");
             isok = false;
         }
-        if (etTask.length() ==0
+        if (etTask.length() ==0)
         {
             etTask.setError("have to be at least 8 char");
             isok = false;
@@ -97,13 +97,21 @@ public class addTaskActivity extends AppCompatActivity
             MyTask Task= new MyTask();
             Task.setCreatedA(new Date());
             Task.getDueDate(new Date(Date));
-            Task.setText(Task);
+            Task.setText(task);
             Task.setTitle(title);
             Task.setImportant(important);
             Task.getNecessary(necessery);
 
             FirebaseAuth auth=FirebaseAuth.getInstance();
-            Task.setOwner
+            Task.setOwner(auth.getCurrentUser().getEmail());
+
+
+
+
+
+
+
+
         }
     }
 }
