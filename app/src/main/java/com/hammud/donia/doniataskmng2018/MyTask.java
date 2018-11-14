@@ -12,6 +12,8 @@ public class MyTask
     private Date createdA;
     private Date dueDate;
 
+    public Object setOwner;
+
     public MyTask()
     {
 
@@ -49,7 +51,7 @@ public class MyTask
         this.important = important;
     }
 
-    public int getNecessary() {
+    public int getNecessary(String necessery) {
         return necessary;
     }
 

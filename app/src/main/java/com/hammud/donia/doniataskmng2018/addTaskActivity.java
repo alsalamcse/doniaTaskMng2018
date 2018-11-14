@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import org.w3c.dom.Text;
 
 import java.util.Calendar;
@@ -100,6 +102,8 @@ public class addTaskActivity extends AppCompatActivity
             Task.setImportant(important);
             Task.getNecessary(necessery);
 
+            FirebaseAuth auth=FirebaseAuth.getInstance();
+            Task.setOwner
         }
     }
 }
