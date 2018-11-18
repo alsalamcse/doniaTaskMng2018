@@ -29,7 +29,27 @@ public class LogInActivity extends AppCompatActivity
            {
                Intent i=new Intent( LogInActivity.this,MainTabsActivity.class);
                startActivity(i);
+               dataHandler();
 
+           }
+
+           private void dataHandler()
+           {
+               boolean isk = true;
+               String email = etEmail.getText().toString();
+               String Password = etPassword.getText().toString();
+              
+               boolean isok = false;
+               if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0)
+               {
+                   etEmail.setError("wrong Email");
+                   isok = false;
+               }
+               if (etPassword.length() < 8) ;
+               {
+                   etPassword.setError("have to be at least 8 char");
+                   isok = false;
+               }
            }
        });
        btn2.setOnClickListener(new View.OnClickListener()
@@ -42,7 +62,7 @@ public class LogInActivity extends AppCompatActivity
            }
 
        });
-       btn1.setOnClickListener(new  View());
+
 
 
     }

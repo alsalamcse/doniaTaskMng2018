@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,8 +14,13 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -25,7 +31,7 @@ public class addTaskActivity extends AppCompatActivity
 {
     private EditText etTitle,etTask,etDueData;
     private TextView tvImportant,tvNecessery;
-    private Button BtnSave,btnDataPicker;
+    private Button BtnSave ,btnDataPicker;
     private int mYear,mMonth,mDay;
 
     @SuppressLint("WrongViewCast")
@@ -64,16 +70,18 @@ public class addTaskActivity extends AppCompatActivity
             DatePickerDialog datePicker=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener()
             {
                 @Override
-                public void onDateSet(DatePicker datePicker, int i, int i1, int i2)
+                public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth)
                 {
-                    etDueData.setText(mDay+"-"+mMonth+"-"+mYear);
+                    etDueData.setText(dayOfMonth + "-" + monthOfYear + "-" + year);
 
                 }
-            }
+            },mYear,mMonth,mDay);
+
         }
     }
 
-    private void dataHandler(){
+    private void dataHandler()
+    {
 
         boolean isk = true;
         String title = etTitle.getText().toString();
@@ -104,6 +112,24 @@ public class addTaskActivity extends AppCompatActivity
 
             FirebaseAuth auth=FirebaseAuth.getInstance();
             Task.setOwner(auth.getCurrentUser().getEmail());
+            DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
+            String key=reference.child("mytask").push().getKey();
+            Task.setKey(key);
+            reference.child("mytask").child(key).setValue(Task).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
+                    if (task.isSuccessful())
+                    {
+                        Toast.makeText(addTaskActivity.this, "add successful", Toast.LENGTH_SHORT).show();
+                    }
+                        else{
+                        Toast.makeText(addTaskActivity.this, "add failed", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+            });
+
+
 
 
 
