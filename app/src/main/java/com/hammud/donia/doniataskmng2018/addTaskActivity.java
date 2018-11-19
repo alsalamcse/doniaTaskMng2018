@@ -76,6 +76,7 @@ public class addTaskActivity extends AppCompatActivity
 
                 }
             },mYear,mMonth,mDay);
+            datePicker.show();
 
         }
     }
