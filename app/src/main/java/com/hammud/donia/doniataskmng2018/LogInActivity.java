@@ -27,11 +27,30 @@ public class LogInActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         etEmail=findViewById(R.id.etEmail);
-       etPassword=findViewById(R.id.etPassword);
-        btnSignIn=findViewById(R.id.btn1);
-        btnSignUp=findViewById(R.id.btn2);
-        btnSignIn.setOnClickListener(new View.OnClickListener()
-       {
+        etPassword=findViewById(R.id.etPassword);
+        btnSignIn=findViewById(R.id.btnSignIn);
+        btnSignUp=findViewById(R.id.btnSignUp);
+        user=auth.getCurrentUser();
+        auth=FirebaseAuth.getInstance();
+
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHundler();
+            }
+        }) ;
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LogInActivity.this,SignUp.class);
+                startActivity(intent);
+            }
+        });
+            
+        }
+
+
            @Override
            public void onClick(View view)
            {
@@ -39,13 +58,13 @@ public class LogInActivity extends AppCompatActivity
                startActivity(i);
                dataHandler();
            }
-           private void dataHandler()
+           private void dataHundler()
            {
                boolean isk = true;
-               String email = etEmail.getText().toString();
+               String Email = etEmail.getText().toString();
                String Password = etPassword.getText().toString();
                boolean isok = false;
-               if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0)
+               if (Email.length() < 4 || Email.indexOf('8') < 0 || Email.indexOf('.') < 0)
                {
                    etEmail.setError("wrong Email");
                    isok = false;
@@ -58,7 +77,9 @@ public class LogInActivity extends AppCompatActivity
 
 
            }
-           private void signIn(String email,String password){
+           private void signIn(String email,String password)
+           {
+
                auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>()
                {
                    @Override
@@ -67,14 +88,30 @@ public class LogInActivity extends AppCompatActivity
                        if (task.isSuccessful()){
                            Toast.makeText(LogInActivity.this,"LogIn Successful",Toast.LENGTH_SHORT).show();
                            Intent i= new Intent(LogInActivity.this, MainTabsActivity.class);
+                           startActivity(i);
+                           finish();
 
                        }
+                       else
+                       {
+                           Toast.makeText(LogInActivity.this,"SignIn Successful.",Toast.LENGTH_SHORT).show();
+                           Intent intent=new Intent(LogInActivity.this,MainTabsActivity.class);
+                           startActivity(intent);
+                           finish();
+
+                       }
+                       else
+                       {
+                           Toast.makeText(LogInActivity.this,"sign failed "+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                           task.getException().printStackTrace();
+                       }
+
 
                    }
                })
            }
        });
-       btn2.setOnClickListener(new View.OnClickListener()
+        btnSignIn.setOnClickListener(new View.OnClickListener()
        {
            @Override
            public void onClick(View view)
