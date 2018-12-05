@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "170449088769",
+    "firebase_url": "https://doniataskmng2018.firebaseio.com",
+    "project_id": "doniataskmng2018",
+    "storage_bucket": "doniataskmng2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170449088769:android:3be511771a8ff9b2",
+        "android_client_info": {
+          "package_name": "com.hammud.donia.doniataskmng2018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170449088769-qjr8a833ajdsqn88uope7c6cfr4t47lp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hammud.donia.doniataskmng2018",
+            "certificate_hash": "013f43c9a5d380c46de43c04644418dbe5d2a253"
+          }
+        },
+        {
+          "client_id": "170449088769-503ifqgkjoa4u471rja4a16s641krtqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv9X1iJpSqahOPqgZauF540ERoHYiH-gg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170449088769-503ifqgkjoa4u471rja4a16s641krtqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
