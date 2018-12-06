@@ -114,9 +114,9 @@ public class addTaskActivity extends AppCompatActivity
             FirebaseAuth auth=FirebaseAuth.getInstance();
             Task.setOwner(auth.getCurrentUser().getEmail());
             DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
-            String key=reference.child("mytask").push().getKey();
+            String key=reference.child("MyTask").push().getKey();
             Task.setKey(key);
-            reference.child("mytask").child(key).setValue(Task).addOnCompleteListener(new OnCompleteListener<Void>() {
+            reference.child("MyTask").child(key).setValue(Task).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {
                     if (task.isSuccessful())

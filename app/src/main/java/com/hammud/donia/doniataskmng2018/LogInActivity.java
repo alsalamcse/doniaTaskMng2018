@@ -47,23 +47,14 @@ public class LogInActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-            
+
         }
-
-
-           @Override
-           public void onClick(View view)
-           {
-               Intent i=new Intent( LogInActivity.this,MainTabsActivity.class);
-               startActivity(i);
-               dataHandler();
-           }
            private void dataHundler()
            {
-               boolean isk = true;
+               boolean isok = true;
                String Email = etEmail.getText().toString();
                String Password = etPassword.getText().toString();
-               boolean isok = false;
+
                if (Email.length() < 4 || Email.indexOf('8') < 0 || Email.indexOf('.') < 0)
                {
                    etEmail.setError("wrong Email");
@@ -73,6 +64,9 @@ public class LogInActivity extends AppCompatActivity
                {
                    etPassword.setError("have to be at least 8 char");
                    isok = false;
+               }
+               if (isok) {
+                   signIn(Email, Password);
                }
 
 
