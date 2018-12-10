@@ -15,10 +15,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LogInActivity extends AppCompatActivity
-{
-    private EditText etEmail,etPassword;
-    private Button btnSignUp,btnSignIn;
+public class LogInActivity extends AppCompatActivity {
+    private EditText etEmail, etPassword;
+    private Button btnSignUp, btnSignIn;
     private FirebaseAuth auth;
     private FirebaseUser user;
 
@@ -26,95 +25,91 @@ public class LogInActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        etEmail=findViewById(R.id.etEmail);
-        etPassword=findViewById(R.id.etPassword);
-        btnSignIn=findViewById(R.id.btnSignIn);
-        btnSignUp=findViewById(R.id.btnSignUp);
-        user=auth.getCurrentUser();
-        auth=FirebaseAuth.getInstance();
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        btnSignIn = findViewById(R.id.btnSignIn);
+        btnSignUp = findViewById(R.id.btnSignUp);
+        user = auth.getCurrentUser();
+        auth = FirebaseAuth.getInstance();
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dataHundler();
             }
-        }) ;
+        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LogInActivity.this,SignUp.class);
+                Intent intent = new Intent(LogInActivity.this, SignUp.class);
                 startActivity(intent);
             }
         });
 
+    }
+
+    private void dataHundler() {
+        boolean isok = true;
+        String Email = etEmail.getText().toString();
+        String Password = etPassword.getText().toString();
+
+        if (Email.length() < 4 || Email.indexOf('@') < 0 || Email.indexOf('.') < 0) {
+            etEmail.setError("wrong Email");
+            isok = false;
         }
-           private void dataHundler()
-           {
-               boolean isok = true;
-               String Email = etEmail.getText().toString();
-               String Password = etPassword.getText().toString();
+        if (etPassword.length() < 8) ;
+        {
+            etPassword.setError("have to be at least 8 char");
+            isok = false;
+        }
+        if (isok) {d
+            signIn(Email, Password);
+        }
 
-               if (Email.length() < 4 || Email.indexOf('8') < 0 || Email.indexOf('.') < 0)
-               {
-                   etEmail.setError("wrong Email");
-                   isok = false;
-               }
-               if (etPassword.length() < 8) ;
-               {
-                   etPassword.setError("have to be at least 8 char");
-                   isok = false;
-               }
-               if (isok) {
-                   signIn(Email, Password);
-               }
-
-
-           }
-           private void signIn(String email,String password)
-           {
-
-               auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>()
-               {
-                   @Override
-                   public void onComplete(@NonNull Task<AuthResult> task)
-                   {
-                       if (task.isSuccessful()){
-                           Toast.makeText(LogInActivity.this,"LogIn Successful",Toast.LENGTH_SHORT).show();
-                           Intent i= new Intent(LogInActivity.this, MainTabsActivity.class);
-                           startActivity(i);
-                           finish();
-
-                       }
-                       else
-                       {
-                           Toast.makeText(LogInActivity.this,"SignIn Successful.",Toast.LENGTH_SHORT).show();
-                           Intent intent=new Intent(LogInActivity.this,MainTabsActivity.class);
-                           startActivity(intent);
-                           finish();
-
-                       }
-                       else
-                       {
-                           Toast.makeText(LogInActivity.this,"sign failed "+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                           task.getException().printStackTrace();
-                       }
-
-
-                   }
-               })
-           }
-       });
-        btnSignIn.setOnClickListener(new View.OnClickListener()
-       {
-           @Override
-           public void onClick(View view)
-           {
-               Intent intent= new Intent(LogInActivity.this,SignUp.class);
-               startActivity(intent);
-           }
-
-       });
 
     }
+
+    private void signIn(String email, String password) {
+
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(LogInActivity.this, "LogIn Successful", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(LogInActivity.this, MainTabsActivity.class);
+                    startActivity(i);
+                    finish();
+
+                } else {
+                    Toast.makeText(LogInActivity.this, "SignIn Successful.", Toast.LENGTH_SHORT).show();
+                  //  Intent intent = new Intent(LogInActivity.this, MainTabsActivity.class);
+                   // startActivity(intent);
+                  //  finish();
+
+                }
+//                      else
+//                       {
+//                           Toast.makeText(LogInActivity.this,"sign failed "+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+//                           task.getException().printStackTrace();
+//                       }
+
+
+            }
+        });
+    }
 }
+     //  });
+//        btnSignIn.setOnClickListener(new View.OnClickListener()
+//       {
+//           @Override
+//           public void onClick(View view)
+//           {
+//               Intent intent= new Intent(LogInActivity.this,SignUp.class);
+//               startActivity(intent);
+//           }
+
+//       });
+
+ //   }
+//}

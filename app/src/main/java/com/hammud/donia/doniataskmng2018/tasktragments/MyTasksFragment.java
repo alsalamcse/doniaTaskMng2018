@@ -70,14 +70,14 @@ public class MyTasksFragment extends Fragment
                 {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(readTasks(), mListener));
         }
         return view;
     }
 
     private List<MyTask> readTasks()
     {
-        ArrayList<MyTask>myTasks = null;
+        final ArrayList<MyTask>myTasks = null;
         // reference to the databade rooot
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
         reference.child("MyTask").addValueEventListener(new ValueEventListener()
@@ -85,7 +85,13 @@ public class MyTasksFragment extends Fragment
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
-                
+                for (DataSnapshot d : dataSnapshot.getChildren())
+                {
+                    MyTask task= d.getValue(MyTask.class);
+                    myTasks.add(task);
+
+                }
+
             }
 
             @Override
@@ -132,6 +138,6 @@ public class MyTasksFragment extends Fragment
     public interface OnListFragmentInteractionListener
     {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(MyTask item);
     }
 }
