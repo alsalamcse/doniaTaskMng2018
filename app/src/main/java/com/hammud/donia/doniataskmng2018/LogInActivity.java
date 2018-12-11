@@ -29,8 +29,9 @@ public class LogInActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
-        user = auth.getCurrentUser();
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +64,8 @@ public class LogInActivity extends AppCompatActivity {
             etPassword.setError("have to be at least 8 char");
             isok = false;
         }
-        if (isok) {d
+        if (isok)
+        {
             signIn(Email, Password);
         }
 
@@ -82,7 +84,7 @@ public class LogInActivity extends AppCompatActivity {
                     finish();
 
                 } else {
-                    Toast.makeText(LogInActivity.this, "SignIn Successful.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivity.this, "SignIn failed.", Toast.LENGTH_SHORT).show();
                   //  Intent intent = new Intent(LogInActivity.this, MainTabsActivity.class);
                    // startActivity(intent);
                   //  finish();

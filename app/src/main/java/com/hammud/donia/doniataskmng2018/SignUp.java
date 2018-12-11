@@ -1,5 +1,6 @@
 package com.hammud.donia.doniataskmng2018;
 
+import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class SignUp extends AppCompatActivity
         etlast=findViewById(R.id.etlast);
         phone=findViewById(R.id.phone);
         etEmail=findViewById(R.id.etEmail);
-        etPassword=findViewById(R.id.edPassWord2);
+        etPassword=findViewById(R.id.etPassword);
         btnSave=findViewById(R.id.btnsave);
         btnSave.setOnClickListener(new View.OnClickListener()
         {
@@ -49,16 +50,26 @@ public class SignUp extends AppCompatActivity
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
 
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                dataHandler();
+                Intent i =new Intent(SignUp.this,LogInActivity.class);
+
+            }
+        });
+
          }
          private void dataHandler()
          {
-             boolean isk = true;
+             boolean isok = true;
              String email = etEmail.getText().toString();
              String Password = etPassword.getText().toString();
              String fName = etfirst.getText().toString();
              String LName = etlast.getText().toString();
              String Phone = phone.getText().toString();
-             boolean isok = false;
+
              if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0)
              {
                  etEmail.setError("wrong Email");

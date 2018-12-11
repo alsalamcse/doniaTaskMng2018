@@ -31,7 +31,7 @@ public class SplashActivity extends AppCompatActivity
             try
             {
                 sleep(3000);
-                Intent i =new Intent(SplashActivity.this,SignUp.class);
+                Intent i =new Intent(SplashActivity.this,LogInActivity.class);
                 startActivity(i);
 
 
