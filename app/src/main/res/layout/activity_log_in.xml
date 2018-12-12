@@ -12,24 +12,20 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="password"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="95dp" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="27dp" />
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnSignIn"

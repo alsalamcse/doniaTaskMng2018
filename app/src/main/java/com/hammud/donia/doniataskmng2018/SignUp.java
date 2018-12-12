@@ -70,12 +70,12 @@ public class SignUp extends AppCompatActivity
              String LName = etlast.getText().toString();
              String Phone = phone.getText().toString();
 
-             if (email.length() < 4 || email.indexOf('8') < 0 || email.indexOf('.') < 0)
+             if (email.length() < 4 || email.indexOf('@') < 0 || email.indexOf('.') < 0)
              {
                  etEmail.setError("wrong Email");
                  isok = false;
              }
-             if (etPassword.length() < 8) ;
+             if (Password.length() < 8)
              {
                  etPassword.setError("have to be at least 8 char");
                  isok = false;

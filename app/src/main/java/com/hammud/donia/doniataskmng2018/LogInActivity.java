@@ -59,7 +59,7 @@ public class LogInActivity extends AppCompatActivity {
             etEmail.setError("wrong Email");
             isok = false;
         }
-        if (etPassword.length() < 8) ;
+        if (Password.length() < 8)
         {
             etPassword.setError("have to be at least 8 char");
             isok = false;
