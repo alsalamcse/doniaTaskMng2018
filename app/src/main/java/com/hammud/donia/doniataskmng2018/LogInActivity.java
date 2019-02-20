@@ -15,14 +15,16 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity
+{
     private EditText etEmail, etPassword;
     private Button btnSignUp, btnSignIn;
     private FirebaseAuth auth;
     private FirebaseUser user;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         etEmail = findViewById(R.id.etEmail);
@@ -33,12 +35,12 @@ public class LogInActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
 
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dataHundler();
-            }
-        });
+     //   btnSignIn.setOnClickListener(new View.OnClickListener() {
+     //       @Override
+        //    public void onClick(View view) {
+         //       dataHundler();
+       //     }
+    //    });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,12 +52,14 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
-    private void dataHundler() {
+    private void dataHundler()
+    {
         boolean isok = true;
         String Email = etEmail.getText().toString();
         String Password = etPassword.getText().toString();
 
-        if (Email.length() < 4 || Email.indexOf('@') < 0 || Email.indexOf('.') < 0) {
+        if (Email.length() < 4 || Email.indexOf('@') < 0 || Email.indexOf('.') < 0)
+        {
             etEmail.setError("wrong Email");
             isok = false;
         }
@@ -72,18 +76,21 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
-    private void signIn(String email, String password) {
+    private void signIn(String email, String password)
+    {
 
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(LogInActivity.this, "LogIn Successful", Toast.LENGTH_SHORT).show();
+                    finish();
                     Intent i = new Intent(LogInActivity.this, MainTabsActivity.class);
                     startActivity(i);
-                    finish();
 
-                } else {
+
+                } else
+                    {
                     Toast.makeText(LogInActivity.this, "SignIn failed.", Toast.LENGTH_SHORT).show();
                   //  Intent intent = new Intent(LogInActivity.this, MainTabsActivity.class);
                    // startActivity(intent);

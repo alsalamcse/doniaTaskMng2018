@@ -32,9 +32,8 @@ public class addTaskActivity extends AppCompatActivity
     private EditText etTitle,etTask,etDueData;
     private TextView tvImportant,tvNecessery;
     private Button BtnSave ,btnDataPicker;
-    private int mYear,mMonth,mDay;
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -52,34 +51,35 @@ public class addTaskActivity extends AppCompatActivity
         BtnSave.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
 
                 dataHandler();
             }
         });
     }
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public void onClick(View view)
-    {
-        if (view==btnDataPicker)
-        {
-            final Calendar c=Calendar.getInstance();
-            mYear=c.get(Calendar.YEAR);
-            mMonth=c.get(Calendar.MONTH);
-            mDay=c.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog datePicker=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener()
-            {
-                @Override
-                public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth)
-                {
-                    etDueData.setText(dayOfMonth + "-" + monthOfYear + "-" + year);
+   // @RequiresApi(api = Build.VERSION_CODES.N)
+   // public void onClick(View view)
+    //{
+     //   if (view==btnDataPicker)
+       // {
+        //    final Calendar c=Calendar.getInstance();
+         //   mYear=c.get(Calendar.YEAR);
+           // mMonth=c.get(Calendar.MONTH);
+          //  mDay=c.get(Calendar.DAY_OF_MONTH);
+          //  DatePickerDialog datePicker=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener()
+           // {
+             //   @Override
+               // public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth)
+               // {
+                 //   etDueData.setText(dayOfMonth + "-" + monthOfYear + "-" + year);
 
-                }
-            },mYear,mMonth,mDay);
-            datePicker.show();
+               // }
+           // },mYear,mMonth,mDay);
+          //  datePicker.show();
 
-        }
-    }
+        //}
+ //   }
 
     private void dataHandler()
     {
@@ -93,12 +93,12 @@ public class addTaskActivity extends AppCompatActivity
         boolean isok = false;
         if (title.length()==0)
         {
-           etTitle.setError("wrong Email");
+           etTitle.setError("Title can not be empty ");
             isok = false;
         }
         if (etTask.length() ==0)
         {
-            etTask.setError("have to be at least 8 char");
+            etTask.setError("Text can not be empty");
             isok = false;
         }
         if (isok)
@@ -113,9 +113,12 @@ public class addTaskActivity extends AppCompatActivity
 
             FirebaseAuth auth=FirebaseAuth.getInstance();
             Task.setOwner(auth.getCurrentUser().getEmail());
+
             DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
+
             String key=reference.child("MyTask").push().getKey();
             Task.setKey(key);
+
             reference.child("MyTask").child(key).setValue(Task).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull com.google.android.gms.tasks.Task<Void> task) {

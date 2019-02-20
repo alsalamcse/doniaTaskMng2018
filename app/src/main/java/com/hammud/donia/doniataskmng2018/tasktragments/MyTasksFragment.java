@@ -77,7 +77,7 @@ public class MyTasksFragment extends Fragment
 
     private List<MyTask> readTasks()
     {
-        final ArrayList<MyTask>myTasks = null;
+        final ArrayList<MyTask>myTasks = new ArrayList<>();
         // reference to the databade rooot
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference();
         reference.child("MyTask").addValueEventListener(new ValueEventListener()
@@ -113,8 +113,6 @@ public class MyTasksFragment extends Fragment
             mListener = (OnListFragmentInteractionListener) context;
         } else
             {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnListFragmentInteractionListener");
         }
     }
 
