@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreezerActivity$PlaceholderFragment">
+
+
+    <TextView
+        android:id="@+id/tvMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:text="Milk"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEggs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eggs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvMilk"
+        app:layout_constraintTop_toBottomOf="@+id/tvMilk" />
+
+    <TextView
+        android:id="@+id/tvCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheese"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvEggs"
+        app:layout_constraintTop_toBottomOf="@+id/tvEggs" />
+
+    <TextView
+        android:id="@+id/tvCheesemozzarella"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheesemozzarella"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCheese"
+        app:layout_constraintTop_toBottomOf="@+id/tvCheese" />
+
+    <TextView
+        android:id="@+id/tvButter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Butter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCheesemozzarella" />
+
+    <TextView
+        android:id="@+id/tvLabna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Labna"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvButter"
+        app:layout_constraintTop_toBottomOf="@+id/tvButter" />
+
+    <TextView
+        android:id="@+id/tvHummud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hummus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLabna"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabna" />
+
+    <TextView
+        android:id="@+id/tvHotdogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotdogs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvHummud"
+        app:layout_constraintTop_toBottomOf="@+id/tvHummud" />
+
+    <TextView
+        android:id="@+id/tvPastrami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastrami"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvHotdogs"
+        app:layout_constraintTop_toBottomOf="@+id/tvHotdogs" />
+
+    <TextView
+        android:id="@+id/tvChoclate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choclate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPastrami"
+        app:layout_constraintTop_toBottomOf="@+id/tvPastrami" />
+</android.support.constraint.ConstraintLayout>

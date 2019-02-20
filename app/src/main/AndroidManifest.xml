@@ -27,7 +27,11 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SearchBuyer"></activity>
+        <activity android:name=".SearchBuyer" />
+        <activity
+            android:name=".FreezerActivity"
+            android:label="@string/title_activity_freezer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
