@@ -10,13 +10,14 @@
 
     <TextView
         android:id="@+id/tvMilk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="3dp"
+        android:layout_width="57dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="145dp"
         android:text="Milk"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvIcecream"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,12 +43,12 @@
 
     <TextView
         android:id="@+id/tvCheesemozzarella"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
         android:text="Cheesemozzarella"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvCheese"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCheese" />
 
     <TextView
@@ -65,7 +66,6 @@
         android:id="@+id/tvLabna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
         android:text="Labna"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
@@ -86,29 +86,87 @@
         android:id="@+id/tvHotdogs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
         android:text="Hotdogs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPastrami"
+        app:layout_constraintStart_toStartOf="@+id/tvSalmon"
+        app:layout_constraintTop_toBottomOf="@+id/tvIcecream" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Choclate"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/tvHummud"
         app:layout_constraintTop_toBottomOf="@+id/tvHummud" />
 
     <TextView
-        android:id="@+id/tvPastrami"
+        android:id="@+id/tvSalmon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pastrami"
+        android:text="Salmon"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvHotdogs"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHotdogs" />
 
     <TextView
-        android:id="@+id/tvChoclate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choclate"
+        android:id="@+id/tvFillet"
+        android:layout_width="61dp"
+        android:layout_height="22dp"
+        android:text="Fillet"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvPastrami"
-        app:layout_constraintTop_toBottomOf="@+id/tvPastrami" />
+        app:layout_constraintStart_toStartOf="@+id/tvSalmon"
+        app:layout_constraintTop_toBottomOf="@+id/tvSalmon" />
+
+    <TextView
+        android:id="@+id/tvChicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chicken"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvFillet"
+        app:layout_constraintTop_toBottomOf="@+id/tvFillet" />
+
+    <TextView
+        android:id="@+id/tvMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meat"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChicken" />
+
+    <TextView
+        android:id="@+id/tvPastrami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="146dp"
+        android:text="Pastrami"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMeat"
+        app:layout_constraintTop_toBottomOf="@+id/tvHotdogs" />
+
+    <TextView
+        android:id="@+id/tvIcecream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="IceCream"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvHotdogs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMilk" />
+
 </android.support.constraint.ConstraintLayout>
