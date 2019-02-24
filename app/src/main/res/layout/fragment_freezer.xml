@@ -8,165 +8,158 @@
     tools:context=".FreezerActivity$PlaceholderFragment">
 
 
-    <TextView
-        android:id="@+id/tvMilk"
-        android:layout_width="57dp"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/btnMilk"
+        android:layout_width="82dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="145dp"
         android:text="Milk"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvIcecream"
+        app:layout_constraintBottom_toTopOf="@+id/btnEggs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvEggs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eggs"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMilk"
-        app:layout_constraintTop_toBottomOf="@+id/tvMilk" />
-
-    <TextView
-        android:id="@+id/tvCheese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cheese"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvEggs"
-        app:layout_constraintTop_toBottomOf="@+id/tvEggs" />
-
-    <TextView
-        android:id="@+id/tvCheesemozzarella"
-        android:layout_width="159dp"
-        android:layout_height="22dp"
-        android:text="Cheesemozzarella"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCheese" />
-
-    <TextView
-        android:id="@+id/tvButter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnEggs"
+        android:layout_width="63dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
+        android:text="Eggs"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMilk" />
+
+    <Button
+        android:id="@+id/btnCheese"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:text="Cheese"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheeseMozzarella"
+        app:layout_constraintStart_toStartOf="@+id/btnEggs"
+        app:layout_constraintTop_toBottomOf="@+id/btnEggs" />
+
+    <Button
+        android:id="@+id/btnCheeseMozzarella"
+        android:layout_width="176dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="182dp"
+        android:text="Cheessemozzarella"
+        app:layout_constraintBottom_toTopOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="@+id/btnButter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnButter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
         android:text="Butter"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLabna"
+        app:layout_constraintEnd_toEndOf="@+id/btnCheese"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCheesemozzarella" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCheeseMozzarella" />
 
-    <TextView
-        android:id="@+id/tvLabna"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnLabna"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
         android:text="Labna"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvButter"
-        app:layout_constraintTop_toBottomOf="@+id/tvButter" />
+        app:layout_constraintBottom_toTopOf="@+id/btnHummus"
+        app:layout_constraintEnd_toEndOf="@+id/btnButter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnButter" />
 
-    <TextView
-        android:id="@+id/tvHummud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnHummus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:text="Hummus"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvLabna"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabna" />
+        app:layout_constraintBottom_toTopOf="@+id/btnIceCream"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="@+id/btnLabna"
+        app:layout_constraintTop_toBottomOf="@+id/btnLabna" />
 
-    <TextView
-        android:id="@+id/tvHotdogs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="Hotdogs"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvPastrami"
-        app:layout_constraintStart_toStartOf="@+id/tvSalmon"
-        app:layout_constraintTop_toBottomOf="@+id/tvIcecream" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Choclate"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvHummud"
-        app:layout_constraintTop_toBottomOf="@+id/tvHummud" />
-
-    <TextView
-        android:id="@+id/tvSalmon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salmon"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHotdogs" />
-
-    <TextView
-        android:id="@+id/tvFillet"
-        android:layout_width="61dp"
-        android:layout_height="22dp"
-        android:text="Fillet"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvSalmon"
-        app:layout_constraintTop_toBottomOf="@+id/tvSalmon" />
-
-    <TextView
-        android:id="@+id/tvChicken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chicken"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvFillet"
-        app:layout_constraintTop_toBottomOf="@+id/tvFillet" />
-
-    <TextView
-        android:id="@+id/tvMeat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Meat"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvChicken" />
-
-    <TextView
-        android:id="@+id/tvPastrami"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="146dp"
-        android:text="Pastrami"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvMeat"
-        app:layout_constraintTop_toBottomOf="@+id/tvHotdogs" />
-
-    <TextView
-        android:id="@+id/tvIcecream"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+    <Button
+        android:id="@+id/btnIceCream"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
         android:text="IceCream"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvHotdogs"
+        app:layout_constraintBottom_toTopOf="@+id/btnPastrami"
+        app:layout_constraintEnd_toEndOf="@+id/btnPastrami"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMilk" />
+        app:layout_constraintTop_toBottomOf="@+id/btnHummus" />
+
+    <Button
+        android:id="@+id/btnPastrami"
+        android:layout_width="106dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:text="Pastrami"
+        app:layout_constraintBottom_toTopOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIceCream" />
+
+    <Button
+        android:id="@+id/btnHotdogs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="144dp"
+        android:text="Hotdogs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnPastrami"
+        app:layout_constraintStart_toStartOf="@+id/btnPastrami"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheeseMozzarella" />
+
+    <Button
+        android:id="@+id/btnSalmon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="5dp"
+        android:text="Salmon"
+        app:layout_constraintBottom_toTopOf="@+id/btnFillet"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotdogs"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHotdogs" />
+
+    <Button
+        android:id="@+id/btnFillet"
+        android:layout_width="113dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Fillet"
+        app:layout_constraintBottom_toTopOf="@+id/btnChicken"
+        app:layout_constraintEnd_toEndOf="@+id/btnSalmon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnChicken"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalmon" />
+
+    <Button
+        android:id="@+id/btnChicken"
+        android:layout_width="97dp"
+        android:layout_height="0dp"
+        android:text="Chicken"
+        app:layout_constraintBottom_toTopOf="@+id/btnMeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFillet" />
+
+    <Button
+        android:id="@+id/btnMeat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Meat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChicken" />
 
 </android.support.constraint.ConstraintLayout>

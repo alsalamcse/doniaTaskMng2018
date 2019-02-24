@@ -18,7 +18,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class FreezerActivity extends AppCompatActivity {
+public class FreezerActivity extends AppCompatActivity
+{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

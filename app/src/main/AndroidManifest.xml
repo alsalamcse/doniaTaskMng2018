@@ -31,7 +31,9 @@
         <activity
             android:name=".FreezerActivity"
             android:label="@string/title_activity_freezer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".listView" />
+        <activity android:name=".Sweets"></activity>
     </application>
 
 </manifest>
