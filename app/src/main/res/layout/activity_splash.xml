@@ -7,11 +7,13 @@
     tools:context=".SplashActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="272dp"
         android:layout_height="341dp"
+        android:layout_marginStart="151dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="170dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btnBuyer"

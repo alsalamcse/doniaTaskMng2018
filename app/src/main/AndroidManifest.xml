@@ -33,7 +33,8 @@
             android:label="@string/title_activity_freezer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".listView" />
-        <activity android:name=".Sweets"></activity>
+        <activity android:name=".Sweets" />
+        <activity android:name=".cleaningTools"></activity>
     </application>
 
 </manifest>
