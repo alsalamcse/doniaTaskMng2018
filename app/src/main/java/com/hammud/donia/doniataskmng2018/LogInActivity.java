@@ -23,8 +23,7 @@ public class LogInActivity extends AppCompatActivity
     private FirebaseUser user;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         etEmail = findViewById(R.id.etEmail);
@@ -33,6 +32,11 @@ public class LogInActivity extends AppCompatActivity
         btnSignUp = findViewById(R.id.btnSignUp);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+        if (auth.getCurrentUser() != null && auth.getCurrentUser().getEmail() != null)
+        {
+            Intent intent = new Intent(LogInActivity.this, SearchBuyer.class);
+            startActivity(intent);
+        }
 
 
      //   btnSignIn.setOnClickListener(new View.OnClickListener() {

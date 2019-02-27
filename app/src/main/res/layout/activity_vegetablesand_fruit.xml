@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VegetablesandFruit">
+
+    <Button
+        android:id="@+id/btnApple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="1dp"
+        android:text="Apple"
+        app:layout_constraintBottom_toTopOf="@+id/btnAporicot"
+        app:layout_constraintEnd_toStartOf="@+id/btnEndive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAporicot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="98dp"
+        android:text="Aporicot"
+        app:layout_constraintBottom_toTopOf="@+id/btnBanana"
+        app:layout_constraintEnd_toStartOf="@+id/btnLemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnApple" />
+
+    <Button
+        android:id="@+id/btnBanana"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Banana"
+        app:layout_constraintBottom_toTopOf="@+id/btnCherry"
+        app:layout_constraintEnd_toEndOf="@+id/btnGrape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAporicot" />
+
+    <Button
+        android:id="@+id/btnCherry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:text="Cherry"
+        app:layout_constraintBottom_toTopOf="@+id/btnCelementine"
+        app:layout_constraintEnd_toEndOf="@+id/BtnMango"
+        app:layout_constraintStart_toStartOf="@+id/btnCelementine"
+        app:layout_constraintTop_toBottomOf="@+id/btnBanana" />
+
+    <Button
+        android:id="@+id/btnCelementine"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:text="Celementine"
+        app:layout_constraintBottom_toTopOf="@+id/btnFannel"
+        app:layout_constraintStart_toStartOf="@+id/btnFannel"
+        app:layout_constraintTop_toBottomOf="@+id/btnCherry" />
+
+    <Button
+        android:id="@+id/btnFannel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:text="Fannel"
+        app:layout_constraintBottom_toTopOf="@+id/btnGrape"
+        app:layout_constraintEnd_toEndOf="@+id/btnGrape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCelementine" />
+
+    <Button
+        android:id="@+id/btnGrape"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Grape"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuava"
+        app:layout_constraintEnd_toEndOf="@+id/btnGuava"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFannel" />
+
+    <Button
+        android:id="@+id/btnGuava"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="GUAVA"
+        app:layout_constraintBottom_toTopOf="@+id/BtnMango"
+        app:layout_constraintEnd_toEndOf="@+id/btnAporicot"
+        app:layout_constraintStart_toStartOf="@+id/BtnMango"
+        app:layout_constraintTop_toBottomOf="@+id/btnGrape" />
+
+    <Button
+        android:id="@+id/BtnMango"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Mango"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrange"
+        app:layout_constraintEnd_toEndOf="@+id/btnOrange"
+        app:layout_constraintStart_toStartOf="@+id/btnOrange"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuava" />
+
+    <Button
+        android:id="@+id/btnOrange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Orange"
+        app:layout_constraintBottom_toTopOf="@+id/btnStrawberry"
+        app:layout_constraintEnd_toEndOf="@+id/btnAubergine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnMango" />
+
+    <Button
+        android:id="@+id/btnStrawberry"
+        android:layout_width="121dp"
+        android:layout_height="0dp"
+        android:text="Strawberry"
+        app:layout_constraintBottom_toTopOf="@+id/btnAubergine"
+        app:layout_constraintStart_toStartOf="@+id/btnOrange"
+        app:layout_constraintTop_toBottomOf="@+id/btnOrange" />
+
+    <Button
+        android:id="@+id/btnAubergine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:text="Aubergine"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvocado"
+        app:layout_constraintEnd_toEndOf="@+id/btnAvocado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStrawberry" />
+
+    <Button
+        android:id="@+id/btnAvocado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:text="Avocado"
+        app:layout_constraintBottom_toTopOf="@+id/btnCarrot"
+        app:layout_constraintEnd_toEndOf="@+id/btnCarrot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAubergine" />
+
+    <Button
+        android:id="@+id/btnCarrot"
+        android:layout_width="104dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="11dp"
+        android:text="Carrot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAvocado" />
+
+    <Button
+        android:id="@+id/btnEndive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="91dp"
+        android:text="Endive"
+        app:layout_constraintBottom_toTopOf="@+id/btnLemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnApple"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLemon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="441dp"
+        android:text="Lemon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAporicot"
+        app:layout_constraintTop_toBottomOf="@+id/btnEndive" />
+</android.support.constraint.ConstraintLayout>

@@ -6,41 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".SearchBuyer">
 
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFreezer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btnFreezer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginBottom="34dp"
-        android:text="Button"
+        android:layout_marginBottom="36dp"
+        android:text="Freezer"
+        app:layout_constraintBottom_toTopOf="@+id/btnVegetablesAndFruit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/btnVegetablesAndFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="36dp"
+        android:text="btnVegetablesAndFruit"
         app:layout_constraintBottom_toTopOf="@+id/btnSweets"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        tools:text="Freezer" />
-
-    <Button
-        android:id="@+id/btnCleaning tools"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="46dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/btnVegetables and Fruit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSweets"
-        tools:text="Cleaning tools" />
-
-    <Button
-        android:id="@+id/btnVegetables and Fruit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="108dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCleaning tools"
-        tools:text="Vegetables and Fruit" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFreezer" />
 
     <Button
         android:id="@+id/btnSweets"
@@ -49,20 +46,18 @@
         android:layout_marginStart="26dp"
         android:layout_marginBottom="51dp"
         android:text="Sweets"
-        app:layout_constraintBottom_toTopOf="@+id/btnCleaning tools"
+        app:layout_constraintBottom_toTopOf="@+id/btnHouseHold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFreezer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVegetablesAndFruit" />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFreezer"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/btnHouseHold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="114dp"
+        android:text="HouseHold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSweets" />
 </android.support.constraint.ConstraintLayout>
