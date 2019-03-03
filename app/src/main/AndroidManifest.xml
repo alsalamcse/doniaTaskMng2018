@@ -28,14 +28,11 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchBuyer" />
-        <activity
-            android:name=".FreezerActivity"
-            android:label="@string/title_activity_freezer"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".listView" />
         <activity android:name=".Sweets" />
         <activity android:name=".cleaningTools" />
-        <activity android:name=".VegetablesandFruit"></activity>
+        <activity android:name=".VegetablesandFruit" />
+        <activity android:name=".FreezerActivity"></activity>
     </application>
 
 </manifest>
