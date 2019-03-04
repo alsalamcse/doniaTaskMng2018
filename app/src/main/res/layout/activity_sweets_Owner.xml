@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sweets">
+
+    <Button
+        android:id="@+id/btnCake"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        android:text="Cake"
+        app:layout_constraintBottom_toTopOf="@+id/btnCookies"
+        app:layout_constraintEnd_toEndOf="@+id/btnCandy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/btnCookies"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Cookies"
+        app:layout_constraintBottom_toTopOf="@+id/btnCandy"
+        app:layout_constraintEnd_toEndOf="@+id/btnCake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCake" />
+
+    <Button
+        android:id="@+id/btnCandy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:text="Candy"
+        app:layout_constraintBottom_toTopOf="@+id/btnSweetSnacks"
+        app:layout_constraintEnd_toEndOf="@+id/btnBiscuit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCookies" />
+
+    <Button
+        android:id="@+id/btnSweetSnacks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:text="SweetSnacks"
+        app:layout_constraintBottom_toTopOf="@+id/btnChocolateAdits"
+        app:layout_constraintEnd_toEndOf="@+id/btnChocolateAdits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCandy" />
+
+    <Button
+        android:id="@+id/btnChocolateAdits"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="ChocolateAdits"
+        app:layout_constraintBottom_toTopOf="@+id/btnSnack"
+        app:layout_constraintEnd_toEndOf="@+id/btnIceCreamCons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSweetSnacks" />
+
+    <Button
+        android:id="@+id/btnSnack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Snack"
+        app:layout_constraintBottom_toTopOf="@+id/btnHilwah"
+        app:layout_constraintEnd_toEndOf="@+id/btnHilwah"
+        app:layout_constraintStart_toStartOf="@+id/btnHilwah"
+        app:layout_constraintTop_toBottomOf="@+id/btnChocolateAdits" />
+
+    <Button
+        android:id="@+id/btnHilwah"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:text="Hilwah"
+        app:layout_constraintBottom_toTopOf="@+id/btnPopcorn"
+        app:layout_constraintEnd_toEndOf="@+id/btnPopcorn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSnack" />
+
+    <Button
+        android:id="@+id/btnPopcorn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Popcorn"
+        app:layout_constraintBottom_toTopOf="@+id/btnBiscuit"
+        app:layout_constraintEnd_toEndOf="@+id/btnBagel"
+        app:layout_constraintStart_toStartOf="@+id/btnBiscuit"
+        app:layout_constraintTop_toBottomOf="@+id/btnHilwah" />
+
+    <Button
+        android:id="@+id/btnBiscuit"
+        android:layout_width="102dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:text="Biscuit"
+        app:layout_constraintBottom_toTopOf="@+id/btnBagel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPopcorn" />
+
+    <Button
+        android:id="@+id/btnBagel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Bagel"
+        app:layout_constraintBottom_toTopOf="@+id/btnFries"
+        app:layout_constraintEnd_toEndOf="@+id/btnFries"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBiscuit" />
+
+    <Button
+        android:id="@+id/btnFries"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="8dp"
+        android:text="Fries"
+        app:layout_constraintBottom_toTopOf="@+id/btnCracker"
+        app:layout_constraintEnd_toEndOf="@+id/btnBiscuit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBagel" />
+
+    <Button
+        android:id="@+id/btnCracker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:text="Cracker"
+        app:layout_constraintBottom_toTopOf="@+id/btnIceCreamCons"
+        app:layout_constraintEnd_toEndOf="@+id/btnFries"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFries" />
+
+    <Button
+        android:id="@+id/btnIceCreamCons"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="11dp"
+        android:text="IceCreamCons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnCracker"
+        app:layout_constraintTop_toBottomOf="@+id/btnCracker" />
+</android.support.constraint.ConstraintLayout>

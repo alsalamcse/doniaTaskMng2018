@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreezerActivity">
+
+    <Button
+        android:id="@+id/btnMilk"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:text="Milk"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheese"
+        app:layout_constraintEnd_toEndOf="@+id/btnEggs"
+        app:layout_constraintStart_toStartOf="@+id/btnEggs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEggs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="1dp"
+        android:text="Eggs"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheese"
+        app:layout_constraintEnd_toEndOf="@+id/btnCheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCheese"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="403dp"
+        android:text="Cheese"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnButter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEggs" />
+
+    <Button
+        android:id="@+id/btnButter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Butter"
+        app:layout_constraintBottom_toTopOf="@+id/btnLabna"
+        app:layout_constraintEnd_toEndOf="@+id/btnChicken"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheese" />
+
+    <Button
+        android:id="@+id/btnLabna"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Labna"
+        app:layout_constraintBottom_toTopOf="@+id/btnHummus"
+        app:layout_constraintEnd_toEndOf="@+id/btnHummus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnButter" />
+
+    <Button
+        android:id="@+id/btnHummus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Hummus"
+        app:layout_constraintBottom_toTopOf="@+id/btnIceCream"
+        app:layout_constraintEnd_toEndOf="@+id/btnButter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLabna" />
+
+    <Button
+        android:id="@+id/btnHotdogs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Hotdogs"
+        app:layout_constraintBottom_toTopOf="@+id/btnPastrami"
+        app:layout_constraintEnd_toEndOf="@+id/btnPastrami"
+        app:layout_constraintStart_toStartOf="@+id/btnHummus"
+        app:layout_constraintTop_toBottomOf="@+id/btnIceCream" />
+
+    <Button
+        android:id="@+id/btnPastrami"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Pastrami"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalmon"
+        app:layout_constraintEnd_toEndOf="@+id/btnFillet"
+        app:layout_constraintStart_toStartOf="@+id/btnSalmon"
+        app:layout_constraintTop_toBottomOf="@+id/btnHotdogs" />
+
+    <Button
+        android:id="@+id/btnIceCream"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="IceCream"
+        app:layout_constraintBottom_toTopOf="@+id/btnHotdogs"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="@+id/btnHummus"
+        app:layout_constraintTop_toBottomOf="@+id/btnHummus" />
+
+    <Button
+        android:id="@+id/btnSalmon"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:text="Salmon"
+        app:layout_constraintBottom_toTopOf="@+id/btnFillet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPastrami" />
+
+    <Button
+        android:id="@+id/btnFillet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Fillet"
+        app:layout_constraintBottom_toTopOf="@+id/btnChicken"
+        app:layout_constraintEnd_toEndOf="@+id/btnSalmon"
+        app:layout_constraintStart_toStartOf="@+id/btnHummus"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalmon" />
+
+    <Button
+        android:id="@+id/btnChicken"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:text="Chicken"
+        app:layout_constraintBottom_toTopOf="@+id/btnMeat"
+        app:layout_constraintEnd_toEndOf="@+id/btnSalmon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFillet" />
+
+    <Button
+        android:id="@+id/btnMeat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="31dp"
+        android:text="Meat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotdogs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChicken" />
+</android.support.constraint.ConstraintLayout>

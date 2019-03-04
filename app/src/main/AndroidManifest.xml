@@ -32,7 +32,11 @@
         <activity android:name=".Sweets" />
         <activity android:name=".cleaningTools" />
         <activity android:name=".VegetablesandFruit" />
-        <activity android:name=".FreezerActivity"></activity>
+        <activity android:name=".FreezerActivity" />
+        <activity android:name=".UpdateVegetablesOwner" />
+        <activity android:name=".UpdatecleaningToolsOwner" />
+        <activity android:name=".UpdateFreezerOwnerActivity" />
+        <activity android:name=".UptadeSweetsOwner"></activity>
     </application>
 
 </manifest>

@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity
         btnOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashActivity.this, LogInActivity.class);
+                Intent intent = new Intent(SplashActivity.this,SearchOwner.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity
         {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashActivity.this, LogInActivity.class);
+                Intent intent = new Intent(SplashActivity.this, SearchBuyer .class);
                 startActivity(intent);
             }
         });
