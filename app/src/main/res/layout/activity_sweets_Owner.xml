@@ -147,12 +147,25 @@
 
     <Button
         android:id="@+id/btnIceCreamCons"
-        android:layout_width="144dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="191dp"
         android:layout_marginBottom="11dp"
         android:text="IceCreamCons"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnCracker"
+        app:layout_constraintEnd_toStartOf="@+id/addID"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCracker" />
+
+    <ImageView
+        android:id="@+id/addID"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnIceCreamCons"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 </android.support.constraint.ConstraintLayout>

@@ -185,10 +185,10 @@
 
     <ImageButton
         android:id="@+id/addID"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
