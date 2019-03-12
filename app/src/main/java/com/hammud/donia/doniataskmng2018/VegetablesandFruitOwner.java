@@ -18,7 +18,7 @@ public class VegetablesandFruitOwner extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vegetablesand_fruit_Owner);
+        setContentView(R.layout.activity_vegetablesand_fruit_owner);
         btnApple=findViewById(R.id.btnApple);
         btnAporicot=findViewById(R.id.btnAporicot);
         btnBanana =findViewById(R.id.btnBanana);

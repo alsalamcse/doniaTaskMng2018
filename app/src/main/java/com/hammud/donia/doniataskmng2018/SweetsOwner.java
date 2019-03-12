@@ -18,7 +18,7 @@ public class SweetsOwner extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sweets_Owner);
+        setContentView(R.layout.activity_sweets_owner);
         btnCake = findViewById(R.id.btnCake);
         btnCookies = findViewById(R.id.btnCookies);
         btnCandy= findViewById(R.id.btnCandy);

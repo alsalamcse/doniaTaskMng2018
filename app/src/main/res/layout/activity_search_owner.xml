@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="36dp"
-        android:text="btnVegetablesAndFruit"
+        android:text="VegetablesAndFruit"
         app:layout_constraintBottom_toTopOf="@+id/btnSweets"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFreezer" />

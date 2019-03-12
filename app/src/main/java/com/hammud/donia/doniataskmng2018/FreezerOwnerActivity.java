@@ -49,6 +49,7 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
         btnMeat.setOnClickListener(this);
 
     }
+
     Intent i = new Intent(getApplicationContext() ,UpdateFreezerOwnerActivity.class);
     @Override
     public void onClick(View v)
