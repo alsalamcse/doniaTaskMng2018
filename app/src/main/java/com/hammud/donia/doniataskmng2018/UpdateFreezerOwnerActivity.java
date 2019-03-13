@@ -6,10 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class UpdateFreezerOwnerActivity extends AppCompatActivity
 {
     private EditText Value , Weight , Amount;
     private Button Save;
+    private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,7 +31,6 @@ public class UpdateFreezerOwnerActivity extends AppCompatActivity
                 if (Value.getText().length() != 0 && Weight.getText().length() != 0 && Amount.getText().length() != 0)
                 {
                     String newVal=Value.getText().toString();
-                    Value.setText(newVal);
 
 
                 }

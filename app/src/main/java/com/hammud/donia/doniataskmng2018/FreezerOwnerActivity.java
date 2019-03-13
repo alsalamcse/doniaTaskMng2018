@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
 
 public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -14,6 +20,9 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
     private Button btnHotdogs,btnPastrami,btnSalmon,btnFillet,btnChicken,btnMeat;
     private ImageButton add;
     public static int value;
+    public static int amount;
+    public static int  Weight;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -34,6 +43,8 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
         btnChicken= findViewById(R.id.btnChicken);
         btnMeat = findViewById(R.id.btnMeat);
 
+        databaseReference=FirebaseDatabase.getInstance().getReference();
+
         btnMilk .setOnClickListener(this);
         btnEggs .setOnClickListener(this);
         btnCheese.setOnClickListener(this);
@@ -48,9 +59,28 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
         btnChicken .setOnClickListener(this);
         btnMeat.setOnClickListener(this);
 
+
     }
 
-    Intent i = new Intent(getApplicationContext() ,UpdateFreezerOwnerActivity.class);
+
+    public void addItemsToDatabase(){
+        databaseReference.child("Shopping Items").child("Milk").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Eggs").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Cheese").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Butter").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Labna").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Hummus").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("IceCream").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Hotdogs").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Pastrami").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Salmon").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Fillet").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Chicken").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Meat").setValue(value,amount);
+
+    }
+
+    Intent i = new Intent(FreezerOwnerActivity.this,UpdateFreezerOwnerActivity.class);
     @Override
     public void onClick(View v)
     {
@@ -58,6 +88,10 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
             case R.id. btnMilk  :
                 startActivity(i);
                 value = 30;
+                int amount=45;
+               int  Weight=45;
+
+
                 break;
             case R.id. btnEggs :
                 startActivity(i);

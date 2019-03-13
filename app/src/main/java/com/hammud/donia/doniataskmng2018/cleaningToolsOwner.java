@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class cleaningToolsOwner extends AppCompatActivity implements View.OnClickListener
 {
@@ -14,12 +17,17 @@ public class cleaningToolsOwner extends AppCompatActivity implements View.OnClic
     private Button btnDishwashing,btnMatches,btnPaper,btnMops,btnCarpetCleaners,btnToiletCleaners,btnAirFresheners,btnFeatherDuesters;
     private ImageButton add;
     public static int value ;
+    public static int amount;
+    public static int  Weight;
+    private DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cleaning_tools_Owner);
+        setContentView(R.layout.activity_cleaning_tools_owner);
+
         btnToiletTissus = findViewById(R.id.btnToiletTissus);
         btnKitchenRoll= findViewById(R.id.btnKitchenRoll);
         btnFacialTissus= findViewById(R.id.btnFacialTissus);
@@ -34,6 +42,7 @@ public class cleaningToolsOwner extends AppCompatActivity implements View.OnClic
             btnToiletCleaners= findViewById(R.id.btnToiletCleaners);
             btnAirFresheners = findViewById(R.id.btnAirFresheners);
             btnFeatherDuesters= findViewById(R.id.btnFeatherDuesters);
+        databaseReference=FirebaseDatabase.getInstance().getReference();
 
         btnToiletTissus.setOnClickListener(this);
         btnKitchenRoll.setOnClickListener(this);
@@ -51,6 +60,24 @@ public class cleaningToolsOwner extends AppCompatActivity implements View.OnClic
         btnFeatherDuesters .setOnClickListener(this);
 
 
+
+    }
+    public void addItemsToDatabase()
+    {
+        databaseReference.child("Shopping Items").child("ToiletTissus").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("KitchenRoll").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("FacialTissus").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("FabricConditioner").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("DetergentCapsules").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("LiquindDetergent").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Dishwashing").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Matches").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Paper").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("Mops").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("CarpetCleaners").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("ToiletCleaners").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("AirFresheners").setValue(value,amount);
+        databaseReference.child("Shopping Items").child("FeatherDuesters").setValue(value,amount);
 
     }
     Intent i = new Intent(getApplicationContext() ,UpdatecleaningToolsOwner.class);
