@@ -15,7 +15,7 @@ public class SearchBuyer extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
+             super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_buyer);
         btnFreezer = findViewById(R.id.btnFreezer);
         btnVegetablesAndFruit = findViewById(R.id.btnVegetablesAndFruit);

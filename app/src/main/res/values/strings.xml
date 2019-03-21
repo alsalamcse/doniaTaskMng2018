@@ -11,4 +11,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_freezer">FreezerActivity</string>
+
+    <string-array name="SpinnerTools">
+        <item>ToiletTissus</item>
+        <item>KitchenRoll</item>
+        <item>FacialTissus</item>
+        <item>FabricConditioner</item>
+    </string-array>
 </resources>

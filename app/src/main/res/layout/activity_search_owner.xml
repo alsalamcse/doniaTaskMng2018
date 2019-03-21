@@ -11,53 +11,114 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="26dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFreezer"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFreezer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnFreezer"
+    <TextView
+        android:id="@+id/tvFreezer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="36dp"
-        android:text="Freezer"
-        app:layout_constraintBottom_toTopOf="@+id/btnVegetablesAndFruit"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="49dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSweets"
+        app:layout_constraintEnd_toStartOf="@+id/spinFreezer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:text="Freezer" />
 
-    <Button
-        android:id="@+id/btnVegetablesAndFruit"
+    <Spinner
+        android:id="@+id/spinFreezer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFreezer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvFreezer"
+        app:layout_constraintTop_toTopOf="@+id/tvFreezer" />
+
+    <TextView
+        android:id="@+id/tvSweets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="52dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinVegetablesAndFruit"
+        app:layout_constraintEnd_toStartOf="@+id/spinSweets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFreezer"
+        tools:text="Sweets" />
+
+    <Spinner
+        android:id="@+id/spinSweets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
+        android:layout_marginRight="74dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSweets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSweets" />
+
+    <TextView
+        android:id="@+id/tbVegetablesAndFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="VegetablesAndFruit"
-        app:layout_constraintBottom_toTopOf="@+id/btnSweets"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinVegetablesAndFruit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFreezer" />
+        app:layout_constraintTop_toTopOf="@+id/spinVegetablesAndFruit" />
 
-    <Button
-        android:id="@+id/btnSweets"
+    <Spinner
+        android:id="@+id/spinVegetablesAndFruit"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCleaningTools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tbVegetablesAndFruit"
+        app:layout_constraintTop_toBottomOf="@+id/tvSweets" />
+
+    <TextView
+        android:id="@+id/tvCleaningTools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="51dp"
-        android:text="Sweets"
-        app:layout_constraintBottom_toTopOf="@+id/btnHouseHold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVegetablesAndFruit" />
-
-    <Button
-        android:id="@+id/btnHouseHold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="114dp"
-        android:text="HouseHold"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="149dp"
+        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinCleaningTools"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSweets" />
+        app:layout_constraintTop_toBottomOf="@+id/spinVegetablesAndFruit"
+        tools:text="CleaningTools" />
+
+    <Spinner
+        android:id="@+id/spinCleaningTools"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCleaningTools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCleaningTools" />
 </android.support.constraint.ConstraintLayout>

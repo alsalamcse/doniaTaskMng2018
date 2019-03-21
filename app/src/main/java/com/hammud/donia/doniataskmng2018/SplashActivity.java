@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity
         btnOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashActivity.this,SearchOwner.class);
+                Intent intent = new Intent(SplashActivity.this,MainToolsOwner.class);
                 startActivity(intent);
             }
         });

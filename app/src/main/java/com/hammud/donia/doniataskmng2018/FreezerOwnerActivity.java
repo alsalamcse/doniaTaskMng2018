@@ -10,15 +10,12 @@ import android.widget.ImageButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-import java.util.HashSet;
-
 
 public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnClickListener
 {
     private Button btnMilk,btnEggs,btnCheese,btnButter,btnLabna,btnHummus,btnIceCream;
     private Button btnHotdogs,btnPastrami,btnSalmon,btnFillet,btnChicken,btnMeat;
-    private ImageButton add;
+    private ImageButton addID;
     public static int value;
     public static int amount;
     public static int  Weight;
@@ -80,69 +77,105 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
 
     }
 
-    Intent i = new Intent(FreezerOwnerActivity.this,UpdateFreezerOwnerActivity.class);
+
+
+    Intent i = new Intent(getApplicationContext() ,UpdateCleaningToolsOwner.class);
     @Override
     public void onClick(View v)
     {
         switch (v.getId()) {
             case R.id. btnMilk  :
-                startActivity(i);
+                String btnName1=btnMilk.getText().toString();
+                UpdateMethod(btnName1);
+
+//                startActivity(i);
                 value = 30;
-                int amount=45;
-               int  Weight=45;
+//                int amount=45;
+//               int  Weight=45;
 
 
                 break;
             case R.id. btnEggs :
-                startActivity(i);
+                String btnName2=btnEggs.getText().toString();
+                UpdateMethod(btnName2);
+                //startActivity(i);
                 value = 30;
                 break;
             case R.id. btnCheese :
-                startActivity(i);
+                String btnName3=btnCheese.getText().toString();
+                UpdateMethod(btnName3);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id. btnButter :
-                startActivity(i);
+                String btnName4=btnButter.getText().toString();
+                UpdateMethod(btnName4);
+                //startActivity(i);
                 value = 30;
                 break;
             case R.id. btnLabna :
-                startActivity(i);
+                String btnName5=btnLabna.getText().toString();
+                UpdateMethod(btnName5);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id.btnHummus :
-                startActivity(i);
+                String btnName6=btnHummus.getText().toString();
+                UpdateMethod(btnName6);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id.btnIceCream :
-                startActivity(i);
+                String btnName7=btnIceCream.getText().toString();
+                UpdateMethod(btnName7);
+//                startActivity(i);
                 value = 30;
                 break;
             case R.id. btnHotdogs :
-                startActivity(i);
+                String btnName8=btnHotdogs.getText().toString();
+                UpdateMethod(btnName8);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id.btnPastrami :
-                startActivity(i);
+                String btnName9=btnPastrami.getText().toString();
+                UpdateMethod(btnName9);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id. btnSalmon :
-                startActivity(i);
+                String btnName10=btnSalmon.getText().toString();
+                UpdateMethod(btnName10);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id.btnFillet :
-                startActivity(i);
+                String btnName11=btnFillet.getText().toString();
+                UpdateMethod(btnName11);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id. btnChicken  :
-                startActivity(i);
+                String btnName12=btnChicken.getText().toString();
+                UpdateMethod(btnName12);
+               // startActivity(i);
                 value = 30;
                 break;
             case R.id. btnMeat :
-                startActivity(i);
+                String btnName13=btnMeat.getText().toString();
+                UpdateMethod(btnName13);
+               // startActivity(i);
                 value = 30;
                 break;
 
 
 
         }
-}}
+}
+    public void UpdateMethod(String btnName){
+        Intent intent=new Intent(FreezerOwnerActivity.this,AddProductOwner.class);
+        intent.putExtra(btnName,5);
+        startActivity(intent);
+
+    }
+}

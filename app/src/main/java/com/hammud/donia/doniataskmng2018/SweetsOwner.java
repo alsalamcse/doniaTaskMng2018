@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SweetsOwner extends AppCompatActivity implements View.OnClickListener
 {
     private Button btnCake,btnCookies, btnCandy, btnSweetSnacks,btnChocolateAdits, btnSnack,btnHilwah, btnPopcorn, btnBiscuit, btnBagel, btnFries,btnCracker, btnIceCreamCons;
-    private ImageButton add;
+    private ImageButton addID;
     public static int value ;
     public static int amount;
     public static int  Weight;
@@ -54,69 +54,116 @@ public class SweetsOwner extends AppCompatActivity implements View.OnClickListen
         btnFries.setOnClickListener(this);
         btnCracker.setOnClickListener(this);
         btnIceCreamCons.setOnClickListener(this);
-
-
     }
-    Intent i = new Intent(getApplicationContext() ,UptadeSweetsOwner.class);
+        public void addItemsToDatabase()
+        {
+            databaseReference.child("Shopping Items").child("Cake").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Cookies").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Candy").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("SweetSnacks").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("ChocolateAdits").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Snack").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Hilwah").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Popcorn").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Biscuit").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Bagel").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Fries").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("Cracker").setValue(value,amount);
+            databaseReference.child("Shopping Items").child("IceCreamCons").setValue(value,amount);
+
+
+        }
+
+    Intent i = new Intent(getApplicationContext() ,UpdateSweetsOwner.class);
 
     @Override
     public void onClick(View v)
     {
         switch (v.getId()) {
             case R.id. btnCake  :
-                startActivity(i);
+                String btnName1=btnCake.getText().toString();
+                UpdateMethod(btnName1);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id. btnCookies :
-                startActivity(i);
+                String btnName2=btnCookies.getText().toString();
+                UpdateMethod(btnName2);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id.  btnCandy:
-                startActivity(i);
+                String btnName3=btnCandy.getText().toString();
+                UpdateMethod(btnName3);
+              //  startActivity(i);
                 value = 20;
                 break;
             case R.id. btnSweetSnacks :
-                startActivity(i);
+                String btnName4=btnSweetSnacks.getText().toString();
+                UpdateMethod(btnName4);
+              //  startActivity(i);
                 value = 20;
                 break;
             case R.id.  btnChocolateAdits:
-                startActivity(i);
+                String btnName5=btnChocolateAdits.getText().toString();
+                UpdateMethod(btnName5);
+              //  startActivity(i);
                 value = 20;
                 break;
             case R.id.btnSnack  :
-                startActivity(i);
+                String btnName6=btnSnack.getText().toString();
+                UpdateMethod(btnName6);
+                //startActivity(i);
                 value = 20;
                 break;
             case R.id. btnHilwah :
-                startActivity(i);
+                String btnName7=btnHilwah.getText().toString();
+                UpdateMethod(btnName7);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id. btnPopcorn :
-                startActivity(i);
+                String btnName8=btnPopcorn.getText().toString();
+                UpdateMethod(btnName8);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id.  btnBiscuit:
-                startActivity(i);
+                String btnName9=btnBiscuit.getText().toString();
+                UpdateMethod(btnName9);
+              //  startActivity(i);
                 value = 20;
                 break;
             case R.id. btnBagel :
-                startActivity(i);
+                String btnName10=btnBagel.getText().toString();
+                UpdateMethod(btnName10);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id. btnFries :
-                startActivity(i);
+                String btnName11=btnBagel.getText().toString();
+                UpdateMethod(btnName11);
+
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id. btnCracker :
-                startActivity(i);
+               // startActivity(i);
                 value = 20;
                 break;
             case R.id.btnIceCreamCons :
-                startActivity(i);
+               // startActivity(i);
                 value = 20;
                 break;
 
 
 
         }
-}}
+}
+    public void UpdateMethod(String btnName){
+        Intent intent=new Intent(SweetsOwner.this,AddProductOwner.class);
+        intent.putExtra(btnName,5);
+        startActivity(intent);
+
+    }
+}

@@ -28,15 +28,17 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SearchBuyer" />
+        <activity android:name=".SearchOwner" />
         <activity android:name=".listView" />
         <activity android:name=".Sweets" />
         <activity android:name=".cleaningTools" />
         <activity android:name=".VegetablesandFruit" />
         <activity android:name=".FreezerActivity" />
-        <activity android:name=".UpdateVegetablesOwner" />
-        <activity android:name=".UpdatecleaningToolsOwner" />
-        <activity android:name=".UpdateFreezerOwnerActivity" />
-        <activity android:name=".UptadeSweetsOwner"></activity>
+        <activity android:name=".AddProductOwner" />
+        <activity android:name=".MainToolsOwner"/>
+
+
+
     </application>
 
 </manifest>
