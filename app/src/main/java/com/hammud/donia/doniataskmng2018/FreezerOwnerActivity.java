@@ -79,7 +79,7 @@ public class  FreezerOwnerActivity extends AppCompatActivity implements View.OnC
 
 
 
-    Intent i = new Intent(getApplicationContext() ,UpdateCleaningToolsOwner.class);
+   // Intent i = new Intent(getApplicationContext() ,UpdateCleaningToolsOwner.class);
     @Override
     public void onClick(View v)
     {

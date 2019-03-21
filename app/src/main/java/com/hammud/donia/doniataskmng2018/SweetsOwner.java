@@ -74,7 +74,7 @@ public class SweetsOwner extends AppCompatActivity implements View.OnClickListen
 
         }
 
-    Intent i = new Intent(getApplicationContext() ,UpdateSweetsOwner.class);
+    //Intent i = new Intent(getApplicationContext() ,UpdateSweetsOwner.class);
 
     @Override
     public void onClick(View v)
